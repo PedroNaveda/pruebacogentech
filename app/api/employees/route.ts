@@ -14,7 +14,6 @@ export async function GET() {
 
 export async function POST(request: Request) {
   const data = await request.json();
-  console.error(data);
   try {
     const employee = await prisma.employee.create({
       data,
